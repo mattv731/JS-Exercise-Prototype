@@ -60,9 +60,9 @@ const james = new Person('James', 31);
 const sam = new Person('Sam', 37);
 const latoya = new Person('Latoya', 32);
 
-console.log(james.toString());
-console.log(sam.toString());
-console.log(latoya.toString());
+// console.log(james.toString());
+// console.log(sam.toString());
+// console.log(latoya.toString());
 
 james.eat('pizza');
 james.eat('tacos');
@@ -72,9 +72,9 @@ james.eat('sushi');
 james.eat('cake');
 james.eat('sandwhich');
 
-console.log('James stomach', james.stomach)
-console.log(james.poop());
-console.log('James stomach after bathroom', james.stomach);
+// console.log('James stomach', james.stomach)
+// console.log(james.poop());
+// console.log('James stomach after bathroom', james.stomach);
 
 
 
@@ -97,11 +97,18 @@ console.log('James stomach after bathroom', james.stomach);
         + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
 */
 
-function Car() {
-  
+function Car(model, milesPerGallon) {
+    this.model = model;
+    this.milesPerGallon = milesPerGallon;
+    this.tank = 0;
+    this.odometer = 0;
 }
-
-
+Car.prototype.fill = function(gallons){
+  this.tank =  this.tank + gallons;
+}
+const miata = new Car('Miata', 30);
+miata.fill(9)
+console.log(miata)
 /*
   TASK 3
     - Write a Baby constructor subclassing Person.
