@@ -132,10 +132,11 @@ console.log(luca.play("hotWheels"))
 /* 
   TASK 4
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. Can use implicit binding meaning:
+  What is to the left of the dot is what 'this' refers to.
+  2. Explicit Binding will invoke the function. It will apply immediately.
+  3. New Binding, 'this' refers to the new object created.
+  4. Const
 */
 
 
